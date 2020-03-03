@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 #my ignore
-.csv
+*.csv
+*.txt

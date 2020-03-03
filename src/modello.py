@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score
 
 
 def grid(cl,classifier,param_grid,n_folds,t_s_D,tLab_downsampled):
-    with open("training/"+cl+".txt","w") as f:
+    with open("src/training/"+cl+".txt","w") as f:
         estimator = GridSearchCV(classifier, cv=n_folds, param_grid=param_grid, n_jobs=-1, verbose=1,scoring='accuracy')
         estimator.fit(t_s_D, tLab_downsampled)
         means = estimator.cv_results_['mean_test_score']
@@ -94,4 +94,4 @@ y_pred=classificatore.predict(test_set_data)
 print(accuracy_score(test_set_labels,y_pred))
 precision, recall, fscore, support = score(test_set_labels, y_pred)
 print("--- %s seconds ---" % round((time.time() - start_time),2))
-pickle.dump(classificatore, open("dump/dumpClass1000", "wb"))
+pickle.dump(classificatore, open("src/dump/classificatore", "wb"))
