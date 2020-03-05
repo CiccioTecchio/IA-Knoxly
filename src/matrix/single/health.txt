@@ -1,16 +1,16 @@
-0:2793 Im not good i feel dizzy
-1:2191 I feel pain inside and I can not identify it
-2:2248 my ankle is hurting me
-3:2740 My face break out badly every month around my cycle
-4:2309 I feel like something is squeezing my lungs
-5:2899 I feel a sharp pain in my ankle joint when I stand
-6:2979 I wake up with a stiff neck every morning  Massage helps but then a couple of days later its back again
-7:2200 When I stand I feel dizzy I do not know why
-[[1.    0.17  0.344 0.193 0.389 0.273 0.167 0.702]
- [0.17  1.    0.306 0.117 0.255 0.382 0.164 0.272]
- [0.344 0.306 1.    0.226 0.349 0.732 0.304 0.296]
- [0.193 0.117 0.226 1.    0.236 0.256 0.257 0.261]
- [0.389 0.255 0.349 0.236 1.    0.42  0.258 0.32 ]
- [0.273 0.382 0.732 0.256 0.42  1.    0.374 0.404]
- [0.167 0.164 0.304 0.257 0.258 0.374 1.    0.21 ]
- [0.702 0.272 0.296 0.261 0.32  0.404 0.21  1.   ]]
+0:2794 i feel pain in my back
+1:2974 I fell through a window while I was cleaning it and I have a shard of glass stuck in my left eye I think it is pretty serious please help
+2:2054 My skin is very dry and peeling
+3:2737 I cant carry anything I have a pain in my shoulder
+4:2939 I have a rash and it itches very bad
+5:2734 There is pain in my joints I can not bear pain
+6:2338 I cut my finger opening a can it wont stop bleeding and the wound is gaping and open
+7:2590 My wound was infected when i was planting some flowers in my garden
+[[1.    0.237 0.339 0.498 0.353 0.626 0.155 0.281]
+ [0.237 1.    0.332 0.301 0.296 0.194 0.358 0.356]
+ [0.339 0.332 1.    0.262 0.525 0.294 0.241 0.199]
+ [0.498 0.301 0.262 1.    0.348 0.581 0.246 0.287]
+ [0.353 0.296 0.525 0.348 1.    0.347 0.215 0.244]
+ [0.626 0.194 0.294 0.581 0.347 1.    0.218 0.143]
+ [0.155 0.358 0.241 0.246 0.215 0.218 1.    0.354]
+ [0.281 0.356 0.199 0.287 0.244 0.143 0.354 1.   ]]

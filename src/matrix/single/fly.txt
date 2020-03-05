@@ -1,16 +1,16 @@
-0:1414 VirginAmerica Only thing I see on passbook is Virgin Mobile Mexico How do I integrate
-1:1987 united Asked Flight attendant what typical compensation would be amp says we might get free TV Unacceptable
-2:1024 VirginAmerica you guys messed up my seating I reserved seating with my friends and you guys gave my seat away  😡 I want free internet
-3:1513 united Gate agent hooked me up with alternate flights If you have a way to PREVENT the constant issues that would rock
-4:1490 VirginAmerica you guys are perfect as always lt3 WeRVirgin
-5:1510 united even on international flight Glasgow to the US Then what about orlando to Newark All 90 mins
-6:1575 united in addition my first flight was delayed an hour and Im arriving at my destination 8 hrs Late Flight
-7:1582 united wont transfer flight ticket to accompany an 11 yr old whos active military mom had to have emergency brain surgery WOW
-[[1.    0.055 0.076 0.063 0.024 0.118 0.086 0.089]
- [0.055 1.    0.339 0.392 0.107 0.316 0.277 0.271]
- [0.076 0.339 1.    0.263 0.168 0.066 0.223 0.151]
- [0.063 0.392 0.263 1.    0.143 0.377 0.388 0.346]
- [0.024 0.107 0.168 0.143 1.    0.055 0.041 0.022]
- [0.118 0.316 0.066 0.377 0.055 1.    0.447 0.329]
- [0.086 0.277 0.223 0.388 0.041 0.447 1.    0.39 ]
- [0.089 0.271 0.151 0.346 0.022 0.329 0.39  1.   ]]
+0:1704 united about 3 hours ago I need to work out if my bag can make it to my hotel here in time or if it will need to go elsewhere
+1:1402 VirginAmerica announced New Route to Austin wfares from 39way nhttptcogA8pbamu0C
+2:1633 united By the way a simple apology goes a long way even if its a hollow one Its obvious that you dont care about me or my wellbeing
+3:1026 VirginAmerica What happened 2 ur vegan food options At least say on ur site so i know I wont be able 2 eat anything for next 6 hrs fail
+4:1861 united UA 746 Pacific Rim and Date Night cut out Not constantly or randomly but one spot repeatably
+5:1653 united you have to follow me in order for me to DMcome on now
+6:1008 virginamerica Well I didnt…but NOW I DO D
+7:1711 united terminal at MIA should have food open before 5am esp when there are flights at 6am Two hours early like recommended Cant eat
+[[ 1.     0.052  0.27   0.165  0.269  0.329  0.085  0.373]
+ [ 0.052  1.     0.023  0.161 -0.022  0.063  0.039  0.104]
+ [ 0.27   0.023  1.     0.112  0.197  0.344  0.193  0.149]
+ [ 0.165  0.161  0.112  1.     0.063  0.05   0.128  0.28 ]
+ [ 0.269 -0.022  0.197  0.063  1.     0.12  -0.05   0.219]
+ [ 0.329  0.063  0.344  0.05   0.12   1.     0.3    0.234]
+ [ 0.085  0.039  0.193  0.128 -0.05   0.3    1.    -0.037]
+ [ 0.373  0.104  0.149  0.28   0.219  0.234 -0.037  1.   ]]

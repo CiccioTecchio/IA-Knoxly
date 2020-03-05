@@ -1,5 +1,7 @@
 import pandas, random, pickle, os
 import numpy as np
+import matplotlib.pyplot as plt
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
 def getIndexOfTopic(text, tipo, topic):
     tr, i = [], 0
@@ -16,12 +18,11 @@ def rndSentences(topicIndex,text, X_embed, n, fp):
     first, last = topicIndex[0], topicIndex[len(topicIndex)-1]
     for i in range(n):
         rnd = random.randrange(first,last)
-        #print(str(i)+": "+str(rnd))
         fp.write(str(i)+":"+str(rnd)+" "+text[rnd]+"\n")
         tr.append(X_embed[rnd])
     return tr
 
-def singleTopicMatrix(rnd_emb):
+def topicMatrix(rnd_emb):
     l = len(rnd_emb)
     m = []
     for j in range(l):
@@ -32,10 +33,34 @@ def singleTopicMatrix(rnd_emb):
             riga.append(round(corr, 3))
     return m
 
-def writeSingleMtr(file, M):
+def writeMatrix(fp, M):
     fp.write(str(np.matrix(M)))
     fp.close()
 
+def doubleTopicMatrix(listTopicsIndex, X_embed, text, fp):
+    index, tr, c = [], [], 0
+    for i in listTopicsIndex:
+        end = len(i)-1
+        rnd1, rnd2 = random.randrange(end), random.randrange(end)
+        tmp = [i[rnd1], i[rnd2]]
+        index.extend(tmp)
+    for i in index:
+        fp.write(str(c)+":"+str(i)+" "+text[i]+"\n")
+        tr.append(X_embed[i])
+        c+=1
+    return tr 
+
+def createMatrix(listTopicsIndex, X_embed, text, files):
+    matrixList = []
+    for i in range(len(listTopicsIndex)):
+        fp = open(files[i], "w")
+        rnd = rndSentences(listTopicsIndex[i], text, X_embed, 8, fp)
+        mtr = topicMatrix(rnd)
+        writeMatrix(fp, mtr) 
+        matrixList.append(mtr)
+    return matrixList
+        
+        
 path = "src/dump"
 colnames = ['text', 'tipo']
 data = pandas.read_csv("src/dataset.csv", encoding='utf8', skiprows=1, names=colnames)
@@ -50,24 +75,12 @@ index_work = getIndexOfTopic(text, tipo, 2)
 index_fly = getIndexOfTopic(text, tipo, 3)
 
 path = "src/matrix/single"
-files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt"]
+files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/double.txt"]
 
-fp = open(files[0], "w")
-rnd_pol = rndSentences(index_pol, text, X_embed, 8, fp)
-mtr_pol = singleTopicMatrix(rnd_pol)
-writeSingleMtr(files[0], mtr_pol)
+listTopicsIndex = [index_pol, index_health, index_work, index_fly]
+matrixList = createMatrix(listTopicsIndex, X_embed,text, files)
 
-fp = open(files[1], "w")
-rnd_health = rndSentences(index_health,text, X_embed, 8,fp)
-mtr_health = singleTopicMatrix(rnd_health)
-writeSingleMtr(files[1], mtr_health)
-
-fp = open(files[2], "w")
-rnd_work = rndSentences(index_work, text, X_embed, 8, fp)
-mtr_work = singleTopicMatrix(rnd_work)
-writeSingleMtr(files[2], mtr_work)
-
-fp = open(files[3], "w")
-rnd_fly = rndSentences(index_fly, text, X_embed, 8, fp)
-mtr_fly = singleTopicMatrix(rnd_fly)
-writeSingleMtr(files[3], mtr_fly)
+fp = open(files[4],"w")
+mixedList = doubleTopicMatrix(listTopicsIndex, X_embed,text, fp)
+mixedMtr = topicMatrix(mixedList)
+writeMatrix(fp, mixedMtr)

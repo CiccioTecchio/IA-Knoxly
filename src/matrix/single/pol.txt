@@ -1,16 +1,16 @@
-0:113 Discussing PanamaPapersInquiriesBill2016nStandingCommitteeOnLawAndJusticenSenate Islamabad n08112016… httpstcolcdWZZF8EN
-1:583 Milford MaCongress St  1130 PM 329oFF 95RH N  00 mph 001 in rain today MilfordMaWx
-2:458 REnWATCH TO THE POINTnWhy cant Congress see beyond the Gandhisnhttpstco9DgSBE38UQ httpstcoKUOctGRsu2
-3:936 inquirerdotnet MJcayabyabINQ kaso Congress should be leading the campaign vs EJK but most are cowards and threatened by Du30
-4:883 imvotingbecause our state representatives congress and house appellate judges have some serious power and i feel many forget that
-5:875 Now matter how bad Clinton is if theres enough good people in congress  if that system stays intact her impact… httpstcoNGlho1ibkH
-6:83 Lets change the Senate Dem amp get Hillary in the WH lets get something done FosterCampbellForLouisiana httpstco8PGSbXATUM
-7:260 Suppose you were an idiot and suppose you were a member of Congress but I repeat myself ― Mark Twain
-[[ 1.     0.036  0.169  0.12   0.009  0.037  0.072  0.064]
- [ 0.036  1.     0.053 -0.039 -0.056 -0.127 -0.062  0.008]
- [ 0.169  0.053  1.     0.32   0.304  0.239  0.243  0.138]
- [ 0.12  -0.039  0.32   1.     0.317  0.254  0.241  0.219]
- [ 0.009 -0.056  0.304  0.317  1.     0.307  0.206  0.229]
- [ 0.037 -0.127  0.239  0.254  0.307  1.     0.435  0.216]
- [ 0.072 -0.062  0.243  0.241  0.206  0.435  1.     0.159]
- [ 0.064  0.008  0.138  0.219  0.229  0.216  0.159  1.   ]]
+0:92 Senate Rob Portman 5 Fast Facts You Need to Know httpstcozoUZuk5BlW SenRobPortman
+1:668 Kantuva And the congress is chock full of republicans who want to push no gay marriage rescind tons of social programming
+2:62 Election2016  SenatenBattle for Control of the Senate Nine Races to WatchnhttpstcoHvNtyMX6QInLifeZette tcot PJNET
+3:823 Congress Not Following Its Own Rules on Diversity httpstcoOD9FgFhCNn httpstco2GGd4q5EZc
+4:735 😂😂 httpstconrykstFT78
+5:311 This THREAD yall READ IT  ForTheAges httpstco9JE6oeiML8
+6:423 Trade unions  a school of communism  XIII Congress of Trade Unions Moscow 1963  почта СССР stamp 3758 from httpstcoGPNlkZLj2f
+7:840 httpstcok0SF9hH3mW  a0bb82168909451cb9232ad3223f46ff
+[[ 1.     0.233  0.281  0.12   0.044  0.155  0.115  0.006]
+ [ 0.233  1.     0.145  0.386  0.081 -0.028  0.123 -0.089]
+ [ 0.281  0.145  1.     0.285 -0.046  0.07   0.105  0.067]
+ [ 0.12   0.386  0.285  1.     0.043  0.096  0.09  -0.004]
+ [ 0.044  0.081 -0.046  0.043  1.     0.157 -0.003  0.186]
+ [ 0.155 -0.028  0.07   0.096  0.157  1.     0.06   0.201]
+ [ 0.115  0.123  0.105  0.09  -0.003  0.06   1.     0.014]
+ [ 0.006 -0.089  0.067 -0.004  0.186  0.201  0.014  1.   ]]
