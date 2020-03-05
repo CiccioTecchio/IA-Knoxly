@@ -72,6 +72,8 @@ start_time = time.time()
 X_embed = concat_Embed(X_text, 500)
 y = data.tipo.tolist()
 y = np.array(y)
+pickle.dump(X_embed, open("src/dump/X_embed","wb"))
+pickle.dump(y, open("src/dump/y", "wb"))
 print("EMBEDDING FATTO!!!")
 
 # Split
