@@ -1,16 +1,16 @@
-0:2794 i feel pain in my back
-1:2974 I fell through a window while I was cleaning it and I have a shard of glass stuck in my left eye I think it is pretty serious please help
-2:2054 My skin is very dry and peeling
-3:2737 I cant carry anything I have a pain in my shoulder
-4:2939 I have a rash and it itches very bad
-5:2734 There is pain in my joints I can not bear pain
-6:2338 I cut my finger opening a can it wont stop bleeding and the wound is gaping and open
-7:2590 My wound was infected when i was planting some flowers in my garden
-[[1.    0.237 0.339 0.498 0.353 0.626 0.155 0.281]
- [0.237 1.    0.332 0.301 0.296 0.194 0.358 0.356]
- [0.339 0.332 1.    0.262 0.525 0.294 0.241 0.199]
- [0.498 0.301 0.262 1.    0.348 0.581 0.246 0.287]
- [0.353 0.296 0.525 0.348 1.    0.347 0.215 0.244]
- [0.626 0.194 0.294 0.581 0.347 1.    0.218 0.143]
- [0.155 0.358 0.241 0.246 0.215 0.218 1.    0.354]
- [0.281 0.356 0.199 0.287 0.244 0.143 0.354 1.   ]]
+0:2210 My throught is so sore
+1:2104 Even though Im an adult my face keeps breaking out in pimples
+2:2095 I feel a pain in my back
+3:2949 After a breakup  I feel something strange in me
+4:2351 My neck feels stiff
+5:2552 There is pain in my joints I can not bear pain
+6:2399 Ive tried reading books but nothing can cheer me up
+7:2656 my child has cough all night she cant sleep
+[[1.    0.276 0.561 0.355 0.524 0.368 0.256 0.359]
+ [0.276 1.    0.286 0.23  0.248 0.245 0.105 0.201]
+ [0.561 0.286 1.    0.382 0.603 0.511 0.256 0.262]
+ [0.355 0.23  0.382 1.    0.31  0.183 0.282 0.169]
+ [0.524 0.248 0.603 0.31  1.    0.384 0.207 0.306]
+ [0.368 0.245 0.511 0.183 0.384 1.    0.273 0.238]
+ [0.256 0.105 0.256 0.282 0.207 0.273 1.    0.32 ]
+ [0.359 0.201 0.262 0.169 0.306 0.238 0.32  1.   ]]

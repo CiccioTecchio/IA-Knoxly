@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
-def getIndexOfTopic(text, tipo, topic):
+def getIndexOfTopic(topic):
     tr, i = [], 0
     l = len(text)
     while i<l and tipo[i]!=topic:
@@ -13,7 +13,7 @@ def getIndexOfTopic(text, tipo, topic):
         i+=1
     return tr
 
-def rndSentences(topicIndex,text, X_embed, n, fp):
+def rndSentences(topicIndex, n, fp):
     tr = []
     first, last = topicIndex[0], topicIndex[len(topicIndex)-1]
     for i in range(n):
@@ -37,7 +37,7 @@ def writeMatrix(fp, M):
     fp.write(str(np.matrix(M)))
     fp.close()
 
-def doubleTopicMatrix(listTopicsIndex, X_embed, text, fp):
+def doubleTopicMatrix(fp):
     index, tr, c = [], [], 0
     for i in listTopicsIndex:
         end = len(i)-1
@@ -50,11 +50,11 @@ def doubleTopicMatrix(listTopicsIndex, X_embed, text, fp):
         c+=1
     return tr 
 
-def createMatrix(listTopicsIndex, X_embed, text, files):
+def createMatrix(n_sentences):
     matrixList = []
     for i in range(len(listTopicsIndex)):
         fp = open(files[i], "w")
-        rnd = rndSentences(listTopicsIndex[i], text, X_embed, 8, fp)
+        rnd = rndSentences(listTopicsIndex[i], n_sentences, fp)
         mtr = topicMatrix(rnd)
         writeMatrix(fp, mtr) 
         matrixList.append(mtr)
@@ -69,18 +69,18 @@ tipo = data.tipo.tolist()
 X_embed = pickle.load(open(path+"/X_embed", "rb"))
 y = pickle.load(open(path+"/y", "rb"))
 
-index_pol = getIndexOfTopic(text, tipo, 0)
-index_health = getIndexOfTopic(text, tipo, 1)
-index_work = getIndexOfTopic(text, tipo, 2)
-index_fly = getIndexOfTopic(text, tipo, 3)
+index_pol = getIndexOfTopic( 0)
+index_health = getIndexOfTopic( 1)
+index_work = getIndexOfTopic( 2)
+index_fly = getIndexOfTopic(3)
 
 path = "src/matrix/single"
 files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/double.txt"]
 
 listTopicsIndex = [index_pol, index_health, index_work, index_fly]
-matrixList = createMatrix(listTopicsIndex, X_embed,text, files)
+matrixList = createMatrix(8)
 
 fp = open(files[4],"w")
-mixedList = doubleTopicMatrix(listTopicsIndex, X_embed,text, fp)
+mixedList = doubleTopicMatrix(fp)
 mixedMtr = topicMatrix(mixedList)
 writeMatrix(fp, mixedMtr)

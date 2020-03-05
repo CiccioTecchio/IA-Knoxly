@@ -1,16 +1,16 @@
-0:1704 united about 3 hours ago I need to work out if my bag can make it to my hotel here in time or if it will need to go elsewhere
-1:1402 VirginAmerica announced New Route to Austin wfares from 39way nhttptcogA8pbamu0C
-2:1633 united By the way a simple apology goes a long way even if its a hollow one Its obvious that you dont care about me or my wellbeing
-3:1026 VirginAmerica What happened 2 ur vegan food options At least say on ur site so i know I wont be able 2 eat anything for next 6 hrs fail
-4:1861 united UA 746 Pacific Rim and Date Night cut out Not constantly or randomly but one spot repeatably
-5:1653 united you have to follow me in order for me to DMcome on now
-6:1008 virginamerica Well I didnt…but NOW I DO D
-7:1711 united terminal at MIA should have food open before 5am esp when there are flights at 6am Two hours early like recommended Cant eat
-[[ 1.     0.052  0.27   0.165  0.269  0.329  0.085  0.373]
- [ 0.052  1.     0.023  0.161 -0.022  0.063  0.039  0.104]
- [ 0.27   0.023  1.     0.112  0.197  0.344  0.193  0.149]
- [ 0.165  0.161  0.112  1.     0.063  0.05   0.128  0.28 ]
- [ 0.269 -0.022  0.197  0.063  1.     0.12  -0.05   0.219]
- [ 0.329  0.063  0.344  0.05   0.12   1.     0.3    0.234]
- [ 0.085  0.039  0.193  0.128 -0.05   0.3    1.    -0.037]
- [ 0.373  0.104  0.149  0.28   0.219  0.234 -0.037  1.   ]]
+0:1136 virginamerica you ROCK for making it so I can watch Oscars on my flight redcarpet oscars oscars2015
+1:1748 united I sent in my feedback  Thank you
+2:1038 VirginAmerica when can I book my flight to Hawaii
+3:1446 VirginAmerica Never had a bad experience before but this one took the cake Now extortion for carry on items as well
+4:1098 virginamerica What is your phone number I cant find who to call about a flight reservation
+5:1041 VirginAmerica Hey first time flyer next week  excited But Im having a hard time getting my flights added to my Elevate account Help
+6:1657 united I know this is probably a no but is there a way to get a cheaper airfare ticket if the flight is leaving in a few hours 🙏
+7:1460 VirginAmerica is that thestarter😁
+[[ 1.     0.158  0.229  0.12   0.197  0.262  0.184  0.038]
+ [ 0.158  1.     0.097  0.129  0.084  0.277  0.204  0.021]
+ [ 0.229  0.097  1.     0.081  0.406  0.409  0.448  0.007]
+ [ 0.12   0.129  0.081  1.     0.1    0.201  0.082  0.137]
+ [ 0.197  0.084  0.406  0.1    1.     0.295  0.311  0.055]
+ [ 0.262  0.277  0.409  0.201  0.295  1.     0.449 -0.005]
+ [ 0.184  0.204  0.448  0.082  0.311  0.449  1.     0.045]
+ [ 0.038  0.021  0.007  0.137  0.055 -0.005  0.045  1.   ]]
