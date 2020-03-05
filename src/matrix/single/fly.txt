@@ -1,8 +1,16 @@
-[[ 1.     0.157  0.055 -0.008  0.051  0.222  0.043  0.165]
- [ 0.157  1.     0.097  0.019  0.1    0.014  0.178  0.128]
- [ 0.055  0.097  1.     0.046  0.009  0.067  0.028 -0.007]
- [-0.008  0.019  0.046  1.     0.096 -0.092  0.069  0.031]
- [ 0.051  0.1    0.009  0.096  1.     0.148  0.295  0.328]
- [ 0.222  0.014  0.067 -0.092  0.148  1.     0.194  0.192]
- [ 0.043  0.178  0.028  0.069  0.295  0.194  1.     0.229]
- [ 0.165  0.128 -0.007  0.031  0.328  0.192  0.229  1.   ]]
+0:1414 VirginAmerica Only thing I see on passbook is Virgin Mobile Mexico How do I integrate
+1:1987 united Asked Flight attendant what typical compensation would be amp says we might get free TV Unacceptable
+2:1024 VirginAmerica you guys messed up my seating I reserved seating with my friends and you guys gave my seat away  😡 I want free internet
+3:1513 united Gate agent hooked me up with alternate flights If you have a way to PREVENT the constant issues that would rock
+4:1490 VirginAmerica you guys are perfect as always lt3 WeRVirgin
+5:1510 united even on international flight Glasgow to the US Then what about orlando to Newark All 90 mins
+6:1575 united in addition my first flight was delayed an hour and Im arriving at my destination 8 hrs Late Flight
+7:1582 united wont transfer flight ticket to accompany an 11 yr old whos active military mom had to have emergency brain surgery WOW
+[[1.    0.055 0.076 0.063 0.024 0.118 0.086 0.089]
+ [0.055 1.    0.339 0.392 0.107 0.316 0.277 0.271]
+ [0.076 0.339 1.    0.263 0.168 0.066 0.223 0.151]
+ [0.063 0.392 0.263 1.    0.143 0.377 0.388 0.346]
+ [0.024 0.107 0.168 0.143 1.    0.055 0.041 0.022]
+ [0.118 0.316 0.066 0.377 0.055 1.    0.447 0.329]
+ [0.086 0.277 0.223 0.388 0.041 0.447 1.    0.39 ]
+ [0.089 0.271 0.151 0.346 0.022 0.329 0.39  1.   ]]

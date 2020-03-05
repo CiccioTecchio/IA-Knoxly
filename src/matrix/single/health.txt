@@ -1,8 +1,16 @@
-[[1.    0.182 0.183 0.129 0.172 0.02  0.118 0.081]
- [0.182 1.    0.225 0.353 0.263 0.081 0.226 0.116]
- [0.183 0.225 1.    0.453 0.557 0.071 0.408 0.314]
- [0.129 0.353 0.453 1.    0.481 0.119 0.356 0.463]
- [0.172 0.263 0.557 0.481 1.    0.032 0.45  0.379]
- [0.02  0.081 0.071 0.119 0.032 1.    0.055 0.115]
- [0.118 0.226 0.408 0.356 0.45  0.055 1.    0.206]
- [0.081 0.116 0.314 0.463 0.379 0.115 0.206 1.   ]]
+0:2793 Im not good i feel dizzy
+1:2191 I feel pain inside and I can not identify it
+2:2248 my ankle is hurting me
+3:2740 My face break out badly every month around my cycle
+4:2309 I feel like something is squeezing my lungs
+5:2899 I feel a sharp pain in my ankle joint when I stand
+6:2979 I wake up with a stiff neck every morning  Massage helps but then a couple of days later its back again
+7:2200 When I stand I feel dizzy I do not know why
+[[1.    0.17  0.344 0.193 0.389 0.273 0.167 0.702]
+ [0.17  1.    0.306 0.117 0.255 0.382 0.164 0.272]
+ [0.344 0.306 1.    0.226 0.349 0.732 0.304 0.296]
+ [0.193 0.117 0.226 1.    0.236 0.256 0.257 0.261]
+ [0.389 0.255 0.349 0.236 1.    0.42  0.258 0.32 ]
+ [0.273 0.382 0.732 0.256 0.42  1.    0.374 0.404]
+ [0.167 0.164 0.304 0.257 0.258 0.374 1.    0.21 ]
+ [0.702 0.272 0.296 0.261 0.32  0.404 0.21  1.   ]]

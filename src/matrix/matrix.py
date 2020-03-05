@@ -11,12 +11,13 @@ def getIndexOfTopic(text, tipo, topic):
         i+=1
     return tr
 
-def rndSentences(topicIndex, X_embed, n):
+def rndSentences(topicIndex,text, X_embed, n, fp):
     tr = []
-    l = len(topicIndex)
+    first, last = topicIndex[0], topicIndex[len(topicIndex)-1]
     for i in range(n):
-        rnd = random.randrange(l)
+        rnd = random.randrange(first,last)
         #print(str(i)+": "+str(rnd))
+        fp.write(str(i)+":"+str(rnd)+" "+text[rnd]+"\n")
         tr.append(X_embed[rnd])
     return tr
 
@@ -32,7 +33,6 @@ def singleTopicMatrix(rnd_emb):
     return m
 
 def writeSingleMtr(file, M):
-    fp = open(file, "w")
     fp.write(str(np.matrix(M)))
     fp.close()
 
@@ -42,7 +42,6 @@ data = pandas.read_csv("src/dataset.csv", encoding='utf8', skiprows=1, names=col
 text = data.text.tolist()
 tipo = data.tipo.tolist()
 X_embed = pickle.load(open(path+"/X_embed", "rb"))
-classificatore = pickle.load(open(path+"/classificatore", "rb"))
 y = pickle.load(open(path+"/y", "rb"))
 
 index_pol = getIndexOfTopic(text, tipo, 0)
@@ -50,19 +49,25 @@ index_health = getIndexOfTopic(text, tipo, 1)
 index_work = getIndexOfTopic(text, tipo, 2)
 index_fly = getIndexOfTopic(text, tipo, 3)
 
-rnd_pol = rndSentences(index_pol, X_embed, 8)
-rnd_health = rndSentences(index_health, X_embed, 8)
-rnd_work = rndSentences(index_work, X_embed, 8)
-rnd_fly = rndSentences(index_fly, X_embed, 8)
-
-mtr_pol = singleTopicMatrix(rnd_pol)
-mtr_health = singleTopicMatrix(rnd_health)
-mtr_work = singleTopicMatrix(rnd_work)
-mtr_fly = singleTopicMatrix(rnd_fly)
-
 path = "src/matrix/single"
 files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt"]
+
+fp = open(files[0], "w")
+rnd_pol = rndSentences(index_pol, text, X_embed, 8, fp)
+mtr_pol = singleTopicMatrix(rnd_pol)
 writeSingleMtr(files[0], mtr_pol)
+
+fp = open(files[1], "w")
+rnd_health = rndSentences(index_health,text, X_embed, 8,fp)
+mtr_health = singleTopicMatrix(rnd_health)
 writeSingleMtr(files[1], mtr_health)
+
+fp = open(files[2], "w")
+rnd_work = rndSentences(index_work, text, X_embed, 8, fp)
+mtr_work = singleTopicMatrix(rnd_work)
 writeSingleMtr(files[2], mtr_work)
+
+fp = open(files[3], "w")
+rnd_fly = rndSentences(index_fly, text, X_embed, 8, fp)
+mtr_fly = singleTopicMatrix(rnd_fly)
 writeSingleMtr(files[3], mtr_fly)
