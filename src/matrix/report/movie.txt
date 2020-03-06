@@ -1,0 +1,60 @@
+0:1504 In the teeming multicultural metropolis of modernday London a seemingly straightforward missingperson case launches a downatheel private eye into a dangerous world of religious fanaticism and political intrigue
+1:1846 In the world of highend art auctions and antiques Virgil Oldman is an elderly and esteemed but eccentric genius artexpert known and appreciated by the world Oldman is hired by a  See full summary »
+2:1887 After a sudden underwater tremor sets free scores of the prehistoric maneating fish an unlikely group of strangers must band together to stop themselves from becoming fish food for the areas new razortoothed residents
+3:1340 In 2074 when the mob wants to get rid of someone the target is sent into the past where a hired gun awaits  someone like Joe  who one day learns the mob wants to close the loop by sending back Joes future self for assassination
+4:1248 After he becomes a quadriplegic from a paragliding accident an aristocrat hires a young man from the projects to be his caregiver
+5:1746 The unconventional love story of an aspiring actress her determined driver and their boss eccentric billionaire Howard Hughes
+6:1332 As the War continues to rage Americas president struggles with continuing carnage on the battlefield as he fights with many inside his own cabinet on the decision to emancipate the slaves
+7:1719 The continuation of Joes sexually dictated life delves into the darker aspects of her adulthood obsessions and what led to her being in Seligmans care
+8:1890 Pete and Debbie are both about to turn 40 their kids hate each other both of their businesses are failing theyre on the verge of losing their house and their relationship is threatening to fall apart
+9:1063 Two stage magicians engage in competitive oneupmanship in an attempt to create the ultimate stage illusion
+10:1194 Steve Rogers a rejected military soldier transforms into Captain America after taking a dose of a SuperSoldier serum But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization
+11:1938 Ryan Bingham enjoys living out of a suitcase for his job traveling around the country firing people but finds that lifestyle threatened by the presence of a potential love interest and a new hire
+12:1580 Follows the adventures of Aang a young successor to a long line of Avatars who must master all four elements and stop the Fire Nation from enslaving the Water Tribes and the Earth Kingdom
+13:1226 A group of elite warriors parachute into an unfamiliar jungle and are hunted by members of a merciless alien race
+14:1243 A teenager discovers hes the descendant of a Greek god and sets out on an adventure to settle an ongoing battle between the gods
+15:1821 An elite military unit comprised of special operatives known as GI Joe operating out of The Pit takes on an evil organization led by a notorious arms dealer
+16:1989 An origins story centered on the centuriesold feud between the race of aristocratic vampires and their onetime slaves the Lycans
+17:1144 A woman is hired as a handmaiden to a Japanese heiress but secretly she is involved in a plot to defraud her
+18:1821 An elite military unit comprised of special operatives known as GI Joe operating out of The Pit takes on an evil organization led by a notorious arms dealer
+19:1555 A young married couples lives are thrown into a harrowing tailspin when an acquaintance from the husbands past brings mysterious gifts and a horrifying secret to light after more than 20 years
+[[ 1.     0.204  0.072  0.241  0.193  0.29   0.201  0.193  0.145  0.215
+   0.226  0.319  0.12   0.232  0.258  0.181  0.168  0.352  0.181  0.221]
+ [ 0.204  1.     0.138  0.214  0.361  0.409  0.141  0.14   0.025  0.111
+   0.186  0.141  0.107  0.204  0.218  0.324  0.183  0.252  0.324  0.197]
+ [ 0.072  0.138  1.     0.197  0.194  0.111  0.121 -0.026  0.1    0.234
+   0.044  0.158  0.215  0.33   0.153  0.186  0.175  0.176  0.186  0.156]
+ [ 0.241  0.214  0.197  1.     0.286  0.258  0.238  0.133  0.222  0.225
+   0.333  0.384  0.096  0.185  0.217  0.339  0.199  0.251  0.339  0.293]
+ [ 0.193  0.361  0.194  0.286  1.     0.395  0.275  0.106  0.083  0.182
+   0.212  0.317  0.097  0.19   0.287  0.239  0.123  0.324  0.239  0.295]
+ [ 0.29   0.409  0.111  0.258  0.395  1.     0.047  0.16   0.242  0.231
+   0.271  0.286  0.083  0.235  0.279  0.199  0.213  0.439  0.199  0.249]
+ [ 0.201  0.141  0.121  0.238  0.275  0.047  1.     0.138  0.114  0.164
+   0.412  0.188  0.155  0.134  0.251  0.277  0.197  0.139  0.277  0.13 ]
+ [ 0.193  0.14  -0.026  0.133  0.106  0.16   0.138  1.     0.175 -0.032
+   0.047  0.23   0.011 -0.058  0.052  0.106  0.098  0.186  0.106  0.24 ]
+ [ 0.145  0.025  0.1    0.222  0.083  0.242  0.114  0.175  1.     0.11
+   0.157  0.34   0.027  0.066  0.153  0.028  0.095  0.204  0.028  0.316]
+ [ 0.215  0.111  0.234  0.225  0.182  0.231  0.164 -0.032  0.11   1.
+   0.176  0.085  0.166  0.254  0.299  0.217  0.143  0.266  0.217  0.135]
+ [ 0.226  0.186  0.044  0.333  0.212  0.271  0.412  0.047  0.157  0.176
+   1.     0.25   0.202  0.256  0.233  0.38   0.127  0.245  0.38   0.145]
+ [ 0.319  0.141  0.158  0.384  0.317  0.286  0.188  0.23   0.34   0.085
+   0.25   1.     0.088  0.124  0.278  0.15   0.069  0.283  0.15   0.27 ]
+ [ 0.12   0.107  0.215  0.096  0.097  0.083  0.155  0.011  0.027  0.166
+   0.202  0.088  1.     0.336  0.334  0.181  0.211  0.135  0.181  0.027]
+ [ 0.232  0.204  0.33   0.185  0.19   0.235  0.134 -0.058  0.066  0.254
+   0.256  0.124  0.336  1.     0.308  0.39   0.276  0.269  0.39   0.145]
+ [ 0.258  0.218  0.153  0.217  0.287  0.279  0.251  0.052  0.153  0.299
+   0.233  0.278  0.334  0.308  1.     0.149  0.362  0.278  0.149  0.278]
+ [ 0.181  0.324  0.186  0.339  0.239  0.199  0.277  0.106  0.028  0.217
+   0.38   0.15   0.181  0.39   0.149  1.     0.151  0.32   1.     0.21 ]
+ [ 0.168  0.183  0.175  0.199  0.123  0.213  0.197  0.098  0.095  0.143
+   0.127  0.069  0.211  0.276  0.362  0.151  1.     0.181  0.151  0.166]
+ [ 0.352  0.252  0.176  0.251  0.324  0.439  0.139  0.186  0.204  0.266
+   0.245  0.283  0.135  0.269  0.278  0.32   0.181  1.     0.32   0.397]
+ [ 0.181  0.324  0.186  0.339  0.239  0.199  0.277  0.106  0.028  0.217
+   0.38   0.15   0.181  0.39   0.149  1.     0.151  0.32   1.     0.21 ]
+ [ 0.221  0.197  0.156  0.293  0.295  0.249  0.13   0.24   0.316  0.135
+   0.145  0.27   0.027  0.145  0.278  0.21   0.166  0.397  0.21   1.   ]]

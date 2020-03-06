@@ -69,13 +69,14 @@ def switch(i):
         0: "p",
         1: "h",
         2: "w",
-        3: "f"
+        3: "f",
+        4: "m"
     }
     return switcher.get(i, 'inalid topic')
 
 def plotSingleMatrix():
     path = "src/matrix/plot/"
-    graph = ["politics", "health", "work", "fly"]
+    graph = ["politics", "health", "work", "fly", "movie"]
     cols = []
     lm = len(matrixList)
     for i in range(n_sentences):
@@ -94,12 +95,12 @@ def plotSingleMatrix():
 def plotMixedMatrix():
     path = "src/matrix/plot/mixed.pdf"
     col = []
-    for i in range(4):#topic num
+    for i in range(5):#topic num
         for j in range(n_mix):#num frasi per singolo topic
             col.append(switch(i)+str(j))
     df = DataFrame(mixedMtr, columns=col)
     ax = plt.axes()
-    sn.heatmap(df, annot=True, ax=ax, yticklabels=col, annot_kws={"fontsize":4})
+    sn.heatmap(df, annot=True, ax=ax, yticklabels=col, annot_kws={"fontsize":3})
     ax.set_title("Correlation matrix of mixed topic")
     plt.savefig(path)
     plt.close()
@@ -107,7 +108,7 @@ def plotMixedMatrix():
 
 path = "src/dump"
 colnames = ['text', 'tipo']
-data = pandas.read_csv("src/dataset.csv", encoding='utf8', skiprows=1, names=colnames)
+data = pandas.read_csv("src/dataset_nosense.csv", encoding='utf8', skiprows=1, names=colnames)
 text = data.text.tolist()
 tipo = data.tipo.tolist()
 X_embed = pickle.load(open(path+"/X_embed", "rb"))
@@ -117,15 +118,16 @@ index_pol = getIndexOfTopic(0)
 index_health = getIndexOfTopic(1)
 index_work = getIndexOfTopic(2)
 index_fly = getIndexOfTopic(3)
+index_movie = getIndexOfTopic(4)
 
-path = "src/matrix/single"
-files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/mixed.txt"]
+path = "src/matrix/report"
+files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/movie.txt", path+"/mixed.txt"]
 
-listTopicsIndex = [index_pol, index_health, index_work, index_fly]
+listTopicsIndex = [index_pol, index_health, index_work, index_fly, index_movie]
 n_sentences = 20
 matrixList = createMatrix(n_sentences)
 
-fp = open(files[4],"w")
+fp = open(files[len(files)-1],"w")
 n_mix = 5 #numero di frasi per topic
 mixedList = doubleTopicMatrix(fp, n_mix)
 mixedMtr = topicMatrix(mixedList)
