@@ -1,16 +1,16 @@
-0:2210 My throught is so sore
-1:2104 Even though Im an adult my face keeps breaking out in pimples
-2:2095 I feel a pain in my back
-3:2949 After a breakup  I feel something strange in me
-4:2351 My neck feels stiff
-5:2552 There is pain in my joints I can not bear pain
-6:2399 Ive tried reading books but nothing can cheer me up
-7:2656 my child has cough all night she cant sleep
-[[1.    0.276 0.561 0.355 0.524 0.368 0.256 0.359]
- [0.276 1.    0.286 0.23  0.248 0.245 0.105 0.201]
- [0.561 0.286 1.    0.382 0.603 0.511 0.256 0.262]
- [0.355 0.23  0.382 1.    0.31  0.183 0.282 0.169]
- [0.524 0.248 0.603 0.31  1.    0.384 0.207 0.306]
- [0.368 0.245 0.511 0.183 0.384 1.    0.273 0.238]
- [0.256 0.105 0.256 0.282 0.207 0.273 1.    0.32 ]
- [0.359 0.201 0.262 0.169 0.306 0.238 0.32  1.   ]]
+0:2239 I feel pain in the lower back
+1:2212 My daughter had her eyebrows threaded and it pulled an opening of skin in one of her brows that is now puffy and oozing
+2:2245 I cant stand with this horrible feeling in my stomach
+3:2533 i have a hard pain in my stomach
+4:2399 Ive tried reading books but nothing can cheer me up
+5:2495 I cant stand with this horrible feeling in my shoulder
+6:2566 I have a hair shortage
+7:2365 When I stand I feel dizzy I do not know why
+[[1.    0.05  0.442 0.638 0.219 0.461 0.255 0.347]
+ [0.05  1.    0.049 0.15  0.004 0.105 0.248 0.012]
+ [0.442 0.049 1.    0.658 0.325 0.796 0.153 0.42 ]
+ [0.638 0.15  0.658 1.    0.262 0.493 0.26  0.326]
+ [0.219 0.004 0.325 0.262 1.    0.297 0.136 0.237]
+ [0.461 0.105 0.796 0.493 0.297 1.    0.178 0.392]
+ [0.255 0.248 0.153 0.26  0.136 0.178 1.    0.207]
+ [0.347 0.012 0.42  0.326 0.237 0.392 0.207 1.   ]]

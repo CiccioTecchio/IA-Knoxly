@@ -1,7 +1,8 @@
-import pandas, random, pickle, os
+import pandas, random, pickle, os, time
 import numpy as np
 import matplotlib.pyplot as plt
-
+import seaborn as sn
+from pandas import DataFrame 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
 def getIndexOfTopic(topic):
     tr, i = [], 0
@@ -59,8 +60,48 @@ def createMatrix(n_sentences):
         writeMatrix(fp, mtr) 
         matrixList.append(mtr)
     return matrixList
-        
-        
+
+def switch(i):
+    switcher = {
+        0: "p",
+        1: "h",
+        2: "w",
+        3: "f"
+    }
+    return switcher.get(i, 'inalid topic')
+
+def plotSingleMatrix():
+    path = "src/matrix/plot/"
+    graph = ["politics", "health", "work", "fly"]
+    cols = []
+    lm = len(matrixList)
+    for i in range(n_sentences):
+        col = []
+        cols.append(col)
+        for j in range(n_sentences):
+            col.append(switch(i)+str(j))
+    for i in range(lm):
+        df = DataFrame(matrixList[i],columns=cols[i])
+        ax = plt.axes()
+        sn.heatmap(df, annot=True, ax = ax, yticklabels=cols[i])
+        ax.set_title("Correlection matrix of "+graph[i])
+        plt.savefig(path+graph[i]+".pdf")
+        plt.close()
+
+def plotMixedMatrix():
+    path = "src/matrix/plot/mixed.pdf"
+    col = []
+    for i in range(4):#topic num
+        for j in range(2):#num frasi per singolo topic
+            col.append(switch(i)+str(j))
+    df = DataFrame(mixedMtr, columns=col)
+    ax = plt.axes()
+    sn.heatmap(df, annot=True, ax=ax, yticklabels=col)
+    ax.set_title("Correlation matrix of mixed topic")
+    plt.savefig(path)
+    plt.close()
+
+
 path = "src/dump"
 colnames = ['text', 'tipo']
 data = pandas.read_csv("src/dataset.csv", encoding='utf8', skiprows=1, names=colnames)
@@ -78,9 +119,12 @@ path = "src/matrix/single"
 files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/double.txt"]
 
 listTopicsIndex = [index_pol, index_health, index_work, index_fly]
-matrixList = createMatrix(8)
+n_sentences = 8
+matrixList = createMatrix(n_sentences)
 
 fp = open(files[4],"w")
 mixedList = doubleTopicMatrix(fp)
 mixedMtr = topicMatrix(mixedList)
 writeMatrix(fp, mixedMtr)
+plotSingleMatrix()
+plotMixedMatrix()

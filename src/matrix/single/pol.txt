@@ -1,16 +1,16 @@
-0:794 IndigoferaDyeri IntrepidFeline Even voting for her supports WW3  A general testified before Congress that a Syrian nofly zone would
-1:679 CONGRESS tselfanointed ruling class uses IRS to wreak tax tyranny on US citizens FairTax stops it httpstcoCaWlv8P8Rt
-2:172 Go ahead Pappu Destroy Congress Party nnhttpstcocQRrul3DXBnnCongressMukthBharat
-3:614 BernieSanders HillaryClinton POTUS TheDemocrats Make your vote count httpstconWi7XyLigt
-4:81 Hey friends Its ItsElectionDay lets get something done vote Hillary amp Dem straight d OK em the Senate we cant Cong but we can Sen
-5:582 Bears cant write Congress but you can Act now for wildlife living in our National Wildlife Refuges in Alaska… httpstcoJc2TrpcbGk
-6:497 Go LuAnnBennett VA10 needs you to take Congress forward Election2016 httpstcosqSEeGPrzS
-7:88 US POLITICS amp POLICIES is out httpstcosgbPvdpqsh usa senate
-[[1.    0.163 0.257 0.288 0.276 0.16  0.245 0.26 ]
- [0.163 1.    0.278 0.252 0.316 0.16  0.362 0.251]
- [0.257 0.278 1.    0.315 0.439 0.193 0.514 0.255]
- [0.288 0.252 0.315 1.    0.422 0.094 0.315 0.235]
- [0.276 0.316 0.439 0.422 1.    0.187 0.379 0.385]
- [0.16  0.16  0.193 0.094 0.187 1.    0.233 0.18 ]
- [0.245 0.362 0.514 0.315 0.379 0.233 1.    0.253]
- [0.26  0.251 0.255 0.235 0.385 0.18  0.253 1.   ]]
+0:705 TerranGregory You accomplished a great many more things than all of congress combined 
+1:411 AamAadmiPartyhttpstcoI9Bj4vk4Am
+2:709 FareedZakaria VOTE SMARTWE LOVE HILLIARY BUT WITH HER THERE WILL BE MORE MORE  MORE GRIDLOCKGRIDLOCKGRIDLOCK WITH THE US CONGRESS
+3:539 congress will not allow trump to succeed with these horrifying plans
+4:654 Arnab Goswamis Take On Congress New Chief  Rahul Gandhi httpstcoLZcF0hmIBi via YouTube
+5:531 Dear AmericannGive realDonaldTrump a super majority in the Congress and we can Make America Great Again even faster GOP RNC therga
+6:387 BibleReloaded thats what congress for kids says But it seems like a crappy explanation of the 9th amendment httpstco6rYUiPYnm4
+7:716 Im not voting I dont like either candidate nnAlright Well Whos gonna be your congress men or womenState Assembly What props you like
+[[ 1.     0.005  0.332  0.399  0.272  0.459  0.294  0.332]
+ [ 0.005  1.     0.055  0.018  0.023 -0.019  0.076  0.043]
+ [ 0.332  0.055  1.     0.357  0.344  0.423  0.307  0.441]
+ [ 0.399  0.018  0.357  1.     0.322  0.55   0.328  0.305]
+ [ 0.272  0.023  0.344  0.322  1.     0.249  0.211  0.235]
+ [ 0.459 -0.019  0.423  0.55   0.249  1.     0.362  0.353]
+ [ 0.294  0.076  0.307  0.328  0.211  0.362  1.     0.33 ]
+ [ 0.332  0.043  0.441  0.305  0.235  0.353  0.33   1.   ]]

@@ -1,16 +1,16 @@
-0:1136 virginamerica you ROCK for making it so I can watch Oscars on my flight redcarpet oscars oscars2015
-1:1748 united I sent in my feedback  Thank you
-2:1038 VirginAmerica when can I book my flight to Hawaii
-3:1446 VirginAmerica Never had a bad experience before but this one took the cake Now extortion for carry on items as well
-4:1098 virginamerica What is your phone number I cant find who to call about a flight reservation
-5:1041 VirginAmerica Hey first time flyer next week  excited But Im having a hard time getting my flights added to my Elevate account Help
-6:1657 united I know this is probably a no but is there a way to get a cheaper airfare ticket if the flight is leaving in a few hours 🙏
-7:1460 VirginAmerica is that thestarter😁
-[[ 1.     0.158  0.229  0.12   0.197  0.262  0.184  0.038]
- [ 0.158  1.     0.097  0.129  0.084  0.277  0.204  0.021]
- [ 0.229  0.097  1.     0.081  0.406  0.409  0.448  0.007]
- [ 0.12   0.129  0.081  1.     0.1    0.201  0.082  0.137]
- [ 0.197  0.084  0.406  0.1    1.     0.295  0.311  0.055]
- [ 0.262  0.277  0.409  0.201  0.295  1.     0.449 -0.005]
- [ 0.184  0.204  0.448  0.082  0.311  0.449  1.     0.045]
- [ 0.038  0.021  0.007  0.137  0.055 -0.005  0.045  1.   ]]
+0:1335 VirginAmerica Just trying to book tickets to NYC and facing super fun broken styling Dont worry Ill keep trying 
+1:1207 VirginAmerica can you please get me to the new york area before monday afternoon
+2:1580 united v upset with your disability  services When I told one of your employees I was carrying medical equipment she was very rude
+3:1287 VirginAmerica VirginAtlantic I have just checked in flight to SFO from LAX amp been told as Atlantic Flying Club Gold I get no benefits
+4:1176 VirginAmerica Thank you for the follow
+5:1850 united UA63 from Madrid arrived no agent mass confusion we sent to and fro by 3 UA employees MaryJo was rude and unhelpful
+6:1359 VirginAmerica love you guys but pls get some direct routes LAS to AUS
+7:1002 VirginAmerica I didnt today Must mean I need to take another trip
+[[ 1.     0.268  0.137  0.178  0.024  0.141  0.154  0.224]
+ [ 0.268  1.     0.028  0.238  0.122  0.059  0.161  0.271]
+ [ 0.137  0.028  1.     0.172  0.002  0.345  0.069  0.059]
+ [ 0.178  0.238  0.172  1.     0.091  0.238  0.112  0.211]
+ [ 0.024  0.122  0.002  0.091  1.    -0.008  0.068  0.127]
+ [ 0.141  0.059  0.345  0.238 -0.008  1.     0.215  0.123]
+ [ 0.154  0.161  0.069  0.112  0.068  0.215  1.     0.14 ]
+ [ 0.224  0.271  0.059  0.211  0.127  0.123  0.14   1.   ]]
