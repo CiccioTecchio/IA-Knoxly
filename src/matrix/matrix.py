@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sn
 from pandas import DataFrame 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
+random.seed(0)
 def getIndexOfTopic(topic):
     tr, i = [], 0
     l = len(text)
@@ -38,12 +39,14 @@ def writeMatrix(fp, M):
     fp.write(str(np.matrix(M)))
     fp.close()
 
-def doubleTopicMatrix(fp):
+def doubleTopicMatrix(fp, n_sentences):
     index, tr, c = [], [], 0
     for i in listTopicsIndex:
         end = len(i)-1
-        rnd1, rnd2 = random.randrange(end), random.randrange(end)
-        tmp = [i[rnd1], i[rnd2]]
+        tmp = []
+        for j in range(n_sentences):
+            rnd = random.randrange(end)
+            tmp.append(i[rnd])
         index.extend(tmp)
     for i in index:
         fp.write(str(c)+":"+str(i)+" "+text[i]+"\n")
@@ -83,7 +86,7 @@ def plotSingleMatrix():
     for i in range(lm):
         df = DataFrame(matrixList[i],columns=cols[i])
         ax = plt.axes()
-        sn.heatmap(df, annot=True, ax = ax, yticklabels=cols[i])
+        sn.heatmap(df, annot=True, annot_kws={"fontsize":4},ax = ax, yticklabels=cols[i])
         ax.set_title("Correlection matrix of "+graph[i])
         plt.savefig(path+graph[i]+".pdf")
         plt.close()
@@ -92,11 +95,11 @@ def plotMixedMatrix():
     path = "src/matrix/plot/mixed.pdf"
     col = []
     for i in range(4):#topic num
-        for j in range(2):#num frasi per singolo topic
+        for j in range(n_mix):#num frasi per singolo topic
             col.append(switch(i)+str(j))
     df = DataFrame(mixedMtr, columns=col)
     ax = plt.axes()
-    sn.heatmap(df, annot=True, ax=ax, yticklabels=col)
+    sn.heatmap(df, annot=True, ax=ax, yticklabels=col, annot_kws={"fontsize":4})
     ax.set_title("Correlation matrix of mixed topic")
     plt.savefig(path)
     plt.close()
@@ -110,20 +113,21 @@ tipo = data.tipo.tolist()
 X_embed = pickle.load(open(path+"/X_embed", "rb"))
 y = pickle.load(open(path+"/y", "rb"))
 
-index_pol = getIndexOfTopic( 0)
-index_health = getIndexOfTopic( 1)
-index_work = getIndexOfTopic( 2)
+index_pol = getIndexOfTopic(0)
+index_health = getIndexOfTopic(1)
+index_work = getIndexOfTopic(2)
 index_fly = getIndexOfTopic(3)
 
 path = "src/matrix/single"
-files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/double.txt"]
+files = [path+"/pol.txt", path+"/health.txt", path+"/work.txt", path+"/fly.txt", path+"/mixed.txt"]
 
 listTopicsIndex = [index_pol, index_health, index_work, index_fly]
-n_sentences = 8
+n_sentences = 20
 matrixList = createMatrix(n_sentences)
 
 fp = open(files[4],"w")
-mixedList = doubleTopicMatrix(fp)
+n_mix = 5 #numero di frasi per topic
+mixedList = doubleTopicMatrix(fp, n_mix)
 mixedMtr = topicMatrix(mixedList)
 writeMatrix(fp, mixedMtr)
 plotSingleMatrix()
