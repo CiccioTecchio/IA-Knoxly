@@ -105,14 +105,56 @@ def plotMixedMatrix():
     plt.savefig(path)
     plt.close()
 
+def getEmbedByTopic(indexTopic):
+    a = []
+    for i in indexTopic:
+        a.append(X_embed[i])
+    return a
+    
+
+def allProduct(embedTopic): #passa il vettore dei topic x ottenere la matrice dei singoli topic o X_embed per ottenere la mixed matrix
+    l = len(embedTopic)
+    m = []
+    for j in range(l):
+        riga = []
+        m.append(riga)
+        for k in range(l):
+            corr = np.inner(embedTopic[j], embedTopic[k])
+            riga.append(round(corr, 3))
+    return m
+
+def higherProduct(matrix,threshold,n_sentences):
+    i,j = 0,0
+    A = []
+    while len(A) < n_sentences:
+        riga = []
+        A.append(riga)
+        while len(A[i]) < n_sentences:
+            if matrix[i][j] >= threshold:
+                riga.append(matrix[i][j])
+            j+=1
+        j = 0
+        i+=1
+    return A
+    
 
 path = "src/dump"
 colnames = ['text', 'tipo']
-data = pandas.read_csv("src/dataset_nosense.csv", encoding='utf8', skiprows=1, names=colnames)
+filename = "src/dataset_nosense.csv"
+data = pandas.read_csv(filename, encoding='utf8', skiprows=1, names=colnames)
+dump_embed, dump_y = path, path
+
+if filename == "src/dataset.csv":
+    dump_embed+="/X_embed"
+    dump_y+="/y"
+else:
+    dump_y+="/y_nosense"
+    dump_embed+="/X_embed_nosense"
+
 text = data.text.tolist()
 tipo = data.tipo.tolist()
-X_embed = pickle.load(open(path+"/X_embed", "rb"))
-y = pickle.load(open(path+"/y", "rb"))
+X_embed = pickle.load(open(dump_embed, "rb"))
+y = pickle.load(open(dump_y, "rb"))
 
 index_pol = getIndexOfTopic(0)
 index_health = getIndexOfTopic(1)
@@ -134,3 +176,7 @@ mixedMtr = topicMatrix(mixedList)
 writeMatrix(fp, mixedMtr)
 plotSingleMatrix()
 plotMixedMatrix()
+embed_pol = getEmbedByTopic(index_pol)
+#m_pol = allProduct(embed_pol)
+#hight_pol = higherProduct(m_pol, 0.3, 8)
+#print(np.matrix(hight_pol))

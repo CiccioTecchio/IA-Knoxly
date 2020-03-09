@@ -1,4 +1,4 @@
-import csv, pandas, sys, time, pickle
+import csv, os, pandas, sys, time, pickle
 import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
@@ -9,6 +9,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.metrics import accuracy_score
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
 
 def grid(cl,classifier,param_grid,n_folds,t_s_D,tLab_downsampled):
     with open("src/training/"+cl+".txt","w") as f:
@@ -47,11 +48,11 @@ def concat_Embed(totList, part):
         tr.extend(dividi(totList,start,part))
         i+=1
         start+=part
-        print(str(i)+", "+str(len(tr)))
+        #print(str(i)+", "+str(len(tr)))
     if reminder != 0:
         tr.extend(dividi(totList,start,reminder))
         i+=1
-        print(str(i)+", "+str(len(tr)))
+        #print(str(i)+", "+str(len(tr)))
     return tr
 
 
@@ -62,6 +63,17 @@ embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
 # Caricamento set di testi
 colnames = ['text', 'tipo']
 filename = str(sys.argv[1])
+
+pathdump = "src/dump/"
+dump_y, dump_embed, dump_classificatore = pathdump, pathdump, pathdump
+if filename == "src/dataset.csv":
+    dump_y+="y"
+    dump_embed+="X_embed"
+    dump_classificatore+="classificatore"
+else:
+    dump_y+="y_nosense"
+    dump_embed+="X_embed_nosense"
+    dump_classificatore+="classificatore_nosense"
 print(filename)
 data = pandas.read_csv(filename, encoding='utf8', skiprows=1, names=colnames)
 
@@ -72,8 +84,8 @@ start_time = time.time()
 X_embed = concat_Embed(X_text, 500)
 y = data.tipo.tolist()
 y = np.array(y)
-pickle.dump(X_embed, open("src/dump/X_embed","wb"))
-pickle.dump(y, open("src/dump/y", "wb"))
+pickle.dump(X_embed, open(dump_embed,"wb"))
+pickle.dump(y, open(dump_y, "wb"))
 print("EMBEDDING FATTO!!!")
 
 # Split
@@ -96,4 +108,4 @@ y_pred=classificatore.predict(test_set_data)
 print(accuracy_score(test_set_labels,y_pred))
 precision, recall, fscore, support = score(test_set_labels, y_pred)
 print("--- %s seconds ---" % round((time.time() - start_time),2))
-pickle.dump(classificatore, open("src/dump/classificatore", "wb"))
+pickle.dump(classificatore, open(dump_classificatore, "wb"))
