@@ -48,12 +48,19 @@ def concat_Embed(totList, part):
         tr.extend(dividi(totList,start,part))
         i+=1
         start+=part
-        #print(str(i)+", "+str(len(tr)))
+        print(str(i)+", "+str(len(tr)))
     if reminder != 0:
         tr.extend(dividi(totList,start,reminder))
         i+=1
-        #print(str(i)+", "+str(len(tr)))
+        print(str(i)+", "+str(len(tr)))
     return tr
+
+def printMisure(filename, precision, recall, fscore):
+    dato = "dataset usato "+filename+":\n"
+    prec = 'precision: {}'.format(precision)
+    rec = '\nrecall: {}'.format(recall)
+    fsc = '\nfscore: {}'.format(fscore)
+    return dato+prec+rec+fsc
 
 
 # SentenceEmbed
@@ -79,9 +86,13 @@ data = pandas.read_csv(filename, encoding='utf8', skiprows=1, names=colnames)
 
 # Creazione dataset
 X_text = data.text.tolist()
-
+file2 = "src/ds3000.csv"
+data2 = pandas.read_csv(file2, encoding='utf8', skiprows=1, names=colnames)
+foo_text = data2.text.tolist()
+foo_y = data2.tipo.tolist()
 start_time = time.time()
 X_embed = concat_Embed(X_text, 500)
+Foo_embed = concat_Embed(foo_text, 500)
 y = data.tipo.tolist()
 y = np.array(y)
 pickle.dump(X_embed, open(dump_embed,"wb"))
@@ -107,5 +118,20 @@ y_pred=classificatore.predict(test_set_data)
 
 print(accuracy_score(test_set_labels,y_pred))
 precision, recall, fscore, support = score(test_set_labels, y_pred)
-print("--- %s seconds ---" % round((time.time() - start_time),2))
+
+print('precision: {}'.format(precision))
+print('recall: {}'.format(recall))
+print('fscore: {}'.format(fscore))
 pickle.dump(classificatore, open(dump_classificatore, "wb"))
+
+print("Random Forest")
+print("accuracy")
+y_pred=classificatore.predict(Foo_embed)
+
+print(accuracy_score(foo_y,y_pred))
+precision, recall, fscore, support = score(foo_y, y_pred)
+misure = printMisure(filename, precision, recall, fscore)
+fp = open("src/training/misure.txt","w")
+fp.write(misure)
+fp.close()
+print("--- %s seconds ---" % round((time.time() - start_time),2))
