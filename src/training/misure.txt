@@ -1,0 +1,8 @@
+dataset usato src/dataset.csv:
+precision: [0.97938144 1.         1.         0.95169082]
+recall: [0.95  0.995 1.    0.985]
+fscore: [0.96446701 0.99749373 1.         0.96805897]
+dataset usato src/dataset_nosense.csv:
+precision: [0.97837838 0.99       1.         0.92957746 0.98019802]
+recall: [0.905 0.99  1.    0.99  0.99 ]
+fscore: [0.94025974 0.99       1.         0.95883777 0.98507463]
