@@ -48,19 +48,20 @@ def concat_Embed(totList, part):
         tr.extend(dividi(totList,start,part))
         i+=1
         start+=part
-        print(str(i)+", "+str(len(tr)))
+        #print(str(i)+", "+str(len(tr)))
     if reminder != 0:
         tr.extend(dividi(totList,start,reminder))
         i+=1
-        print(str(i)+", "+str(len(tr)))
+        #print(str(i)+", "+str(len(tr)))
     return tr
 
-def printMisure(filename, precision, recall, fscore):
+def printMisure(filename, precision, recall, fscore, accuracy):
     dato = "dataset usato "+filename+":\n"
     prec = 'precision: {}'.format(precision)
     rec = '\nrecall: {}'.format(recall)
     fsc = '\nfscore: {}'.format(fscore)
-    return dato+prec+rec+fsc
+    acc = '\naccuracy: {}'.format(accuracy)
+    return dato+acc+prec+rec+fsc
 
 
 # SentenceEmbed
@@ -73,7 +74,7 @@ filename = str(sys.argv[1])
 
 pathdump = "src/dump/"
 dump_y, dump_embed, dump_classificatore = pathdump, pathdump, pathdump
-if filename == "src/dataset.csv":
+if filename == "src/ds1000.csv":
     dump_y+="y"
     dump_embed+="X_embed"
     dump_classificatore+="classificatore"
@@ -81,12 +82,12 @@ else:
     dump_y+="y_nosense"
     dump_embed+="X_embed_nosense"
     dump_classificatore+="classificatore_nosense"
-print(filename)
+#print(filename)
 data = pandas.read_csv(filename, encoding='utf8', skiprows=1, names=colnames)
 
 # Creazione dataset
 X_text = data.text.tolist()
-file2 = "src/ds3000.csv"
+file2 = "src/ds10000.csv"
 data2 = pandas.read_csv(file2, encoding='utf8', skiprows=1, names=colnames)
 foo_text = data2.text.tolist()
 foo_y = data2.tipo.tolist()
@@ -118,13 +119,13 @@ y_pred=classificatore.predict(test_set_data)
 
 print(accuracy_score(test_set_labels,y_pred))
 precision, recall, fscore, support = score(test_set_labels, y_pred)
-misure = printMisure(filename, precision, recall, fscore)
+misure = printMisure(filename, precision, recall, fscore, accuracy_score(test_set_labels,y_pred))
 fp = open("src/training/misure_testing.txt", "a")
 fp.write(misure)
 fp.close()
-print('precision: {}'.format(precision))
-print('recall: {}'.format(recall))
-print('fscore: {}'.format(fscore))
+#print('precision: {}'.format(precision))
+#print('recall: {}'.format(recall))
+#print('fscore: {}'.format(fscore))
 pickle.dump(classificatore, open(dump_classificatore, "wb"))
 
 print("Random Forest")
@@ -133,7 +134,7 @@ y_pred=classificatore.predict(Foo_embed)
 
 print(accuracy_score(foo_y,y_pred))
 precision, recall, fscore, support = score(foo_y, y_pred)
-misure = printMisure(filename, precision, recall, fscore)
+misure = printMisure(filename, precision, recall, fscore, accuracy_score(foo_y,y_pred))
 fp = open("src/validation/misure_wild.txt","a")
 fp.write(misure)
 fp.close()
