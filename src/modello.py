@@ -13,7 +13,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
 
 def grid(cl,classifier,param_grid,n_folds,t_s_D,tLab_downsampled):
     with open("src/training/"+cl+".txt","w") as f:
-        estimator = GridSearchCV(classifier, cv=n_folds, param_grid=param_grid, n_jobs=-1, verbose=1,scoring='accuracy')
+        estimator = GridSearchCV(classifier, cv=n_folds, param_grid=param_grid, n_jobs=-1, verbose=1,scoring='f1_weighted')#scoring='accuracy')
         estimator.fit(t_s_D, tLab_downsampled)
         means = estimator.cv_results_['mean_test_score']
         stds = estimator.cv_results_['std_test_score']
@@ -119,7 +119,7 @@ y_pred=classificatore.predict(test_set_data)
 print(accuracy_score(test_set_labels,y_pred))
 precision, recall, fscore, support = score(test_set_labels, y_pred)
 misure = printMisure(filename, precision, recall, fscore)
-fp = open("src/training/misure.txt", "a")
+fp = open("src/training/misure_testing.txt", "a")
 fp.write(misure)
 fp.close()
 print('precision: {}'.format(precision))
@@ -134,7 +134,7 @@ y_pred=classificatore.predict(Foo_embed)
 print(accuracy_score(foo_y,y_pred))
 precision, recall, fscore, support = score(foo_y, y_pred)
 misure = printMisure(filename, precision, recall, fscore)
-fp = open("src/training/misurePred.txt","a")
+fp = open("src/validation/misure_wild.txt","a")
 fp.write(misure)
 fp.close()
 print("--- %s seconds ---" % round((time.time() - start_time),2))

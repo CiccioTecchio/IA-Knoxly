@@ -74,18 +74,18 @@ def switch(i):
     }
     return switcher.get(i, 'inalid topic')
 
-def plotSingleMatrix():
+def plotSingleMatrix(ml, n_sentences):
     path = "src/matrix/plot/"
     graph = ["politics", "health", "work", "fly", "movie"]
     cols = []
-    lm = len(matrixList)
+    lm = len(ml)
     for i in range(n_sentences):
-        col = []
+        col = []     
         cols.append(col)
         for j in range(n_sentences):
             col.append(switch(i)+str(j))
     for i in range(lm):
-        df = DataFrame(matrixList[i],columns=cols[i])
+        df = DataFrame(ml[i],columns=cols[i])
         ax = plt.axes()
         sn.heatmap(df, annot=True, annot_kws={"fontsize":4},ax = ax, yticklabels=cols[i])
         ax.set_title("Correlection matrix of "+graph[i])
@@ -112,16 +112,35 @@ def getEmbedByTopic(indexTopic):
     return a
     
 
-def allProduct(embedTopic): #passa il vettore dei topic x ottenere la matrice dei singoli topic o X_embed per ottenere la mixed matrix
+def allProduct(embedTopic, threshold, n_sentences): #passa il vettore dei topic x ottenere la matrice dei singoli topic o X_embed per ottenere la mixed matrix
     l = len(embedTopic)
-    m = []
+    m, thresholds = [], []
+    maxC = threshold
     for j in range(l):
         riga = []
         m.append(riga)
         for k in range(l):
             corr = np.inner(embedTopic[j], embedTopic[k])
+            if len(thresholds) < n_sentences and  corr >=maxC:
+                maxC = corr
+                thresholds.append([embedTopic[j], embedTopic[k]])
             riga.append(round(corr, 3))
-    return m
+    return m, thresholds
+
+def matrixMax(thresholds):
+    l = len(thresholds)
+    A = []
+    for i in range(l):
+        riga = []
+        A.append(riga)
+        for j in range(l):
+           if i == j:
+               riga.append(round(np.inner(thresholds[i][0], thresholds[j][0]),3))
+           elif i <j:
+               riga.append(round(np.inner(thresholds[i][0], thresholds[j][1]),3))
+           else:
+               riga.append(round(np.inner(thresholds[i][1], thresholds[j][0]),3))
+    return np.matrix(A) 
 
 def higherProduct(matrix,threshold,n_sentences):
     i,j = 0,0
@@ -136,7 +155,6 @@ def higherProduct(matrix,threshold,n_sentences):
         j = 0
         i+=1
     return A
-    
 
 path = "src/dump"
 colnames = ['text', 'tipo']
@@ -174,9 +192,25 @@ n_mix = 5 #numero di frasi per topic
 mixedList = doubleTopicMatrix(fp, n_mix)
 mixedMtr = topicMatrix(mixedList)
 writeMatrix(fp, mixedMtr)
-plotSingleMatrix()
+#plotSingleMatrix(matrixList)
 plotMixedMatrix()
 embed_pol = getEmbedByTopic(index_pol)
-#m_pol = allProduct(embed_pol)
-#hight_pol = higherProduct(m_pol, 0.3, 8)
-#print(np.matrix(hight_pol))
+embed_health = getEmbedByTopic(index_health)
+embed_work = getEmbedByTopic(index_work)
+embed_fly = getEmbedByTopic(index_fly)
+embed_movie = getEmbedByTopic(index_movie)
+
+m_pol, max_embed_pol = allProduct(embed_pol, 0.6, 5)
+m_health, max_embed_health = allProduct(embed_health, 0.3, 5)
+m_work, max_embed_work = allProduct(embed_work, 0.4, 5)
+m_fly, max_embed_fly = allProduct(embed_fly, 0.5, 5)
+m_movie, max_embed_movie = allProduct(embed_movie, 0.6, 5)
+max_pol = matrixMax(max_embed_pol)
+max_list = [
+matrixMax(max_embed_pol),
+matrixMax(max_embed_health),
+matrixMax(max_embed_work),
+matrixMax(max_embed_fly),
+matrixMax(max_embed_movie)
+]
+plotSingleMatrix(max_list, 5)
