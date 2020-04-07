@@ -134,7 +134,7 @@ y_pred=classificatore.predict(Foo_embed)
 
 print(accuracy_score(foo_y,y_pred))
 precision, recall, fscore, support = score(foo_y, y_pred)
-misure = printMisure(filename, precision, recall, fscore, accuracy_score(foo_y,y_pred))
+misure = printMisure(file2, precision, recall, fscore, accuracy_score(foo_y,y_pred))
 fp = open("src/validation/misure_wild.txt","a")
 fp.write(misure)
 fp.close()
