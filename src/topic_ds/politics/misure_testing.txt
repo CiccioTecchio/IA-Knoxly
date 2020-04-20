@@ -1,0 +1,6 @@
+dataset usato src/topic_ds/politics200.csv:
+accuracy: 0.8
+precision: [0.78947368 1.        ]
+recall: [1.  0.2]
+fscore: [0.88235294 0.33333333]
+roc_auc: 0.7916666666666666

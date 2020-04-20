@@ -40,7 +40,7 @@ n_folds=5
 classificatore = RandomForestClassifier()
 pg = {'n_estimators':[17,37,51,177,213,517], 'min_samples_leaf':[1],'n_jobs':[-1]}
 print("Random Forest")
-bestRFparam=metriche.grid("RF",classificatore,pg,n_folds, training_set_data,training_set_labels,'f1_weighted')
+bestRFparam=metriche.grid("src/topic_class/training/RF.txt",classificatore,pg,n_folds, training_set_data,training_set_labels,'f1_weighted')
 print(bestRFparam)
 
 
