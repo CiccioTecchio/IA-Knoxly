@@ -1,0 +1,6 @@
+dataset usato src/topic_ds/general/general200.csv:
+accuracy: 0.7
+precision: [0.68421053 1.        ]
+recall: [1.         0.14285714]
+fscore: [0.8125 0.25  ]
+roc_auc: 0.7664835164835164

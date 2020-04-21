@@ -131,3 +131,7 @@ dmypy.json
 #my ignore
 *.csv
 *.DS_Store
+error.txt
+src/ds200PRIMEMATRICI.zip
+src/topic_ds/politics/nonBilanciato.zip
+error.txt

@@ -1,0 +1,6 @@
+dataset usato src/topic_ds/travel/travel200.csv:
+accuracy: 0.75
+precision: [0.75 0.  ]
+recall: [1. 0.]
+fscore: [0.85714286 0.        ]
+roc_auc: 0.8683333333333333
