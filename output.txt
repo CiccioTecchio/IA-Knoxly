@@ -1,0 +1,133 @@
+politics
+1, 200
+Random Forest
+Fitting 10 folds for each of 7 candidates, totalling 70 fits
+0.774 (+/-0.135) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.810 (+/-0.184) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.845 (+/-0.163) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.829 (+/-0.189) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.848 (+/-0.216) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.836 (+/-0.188) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.834 (+/-0.203) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+
+{'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+Random Forest
+accuracy
+--- 84.82 seconds ---
+0.625
+conf matrix: [[10 10]
+ [ 5 15]]
+Normalized confusion matrix
+[[0.5  0.5 ]
+ [0.25 0.75]]
+health
+1, 200
+Random Forest
+Fitting 10 folds for each of 7 candidates, totalling 70 fits
+0.932 (+/-0.131) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.931 (+/-0.110) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.946 (+/-0.109) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.945 (+/-0.096) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.948 (+/-0.083) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.950 (+/-0.091) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.953 (+/-0.083) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+
+{'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+Random Forest
+accuracy
+--- 82.74 seconds ---
+0.9
+conf matrix: [[18  2]
+ [ 2 18]]
+Normalized confusion matrix
+[[0.9 0.1]
+ [0.1 0.9]]
+job
+1, 200
+Random Forest
+Fitting 10 folds for each of 7 candidates, totalling 70 fits
+0.843 (+/-0.258) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.883 (+/-0.153) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.891 (+/-0.148) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.907 (+/-0.143) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.920 (+/-0.149) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.909 (+/-0.150) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.923 (+/-0.131) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+
+{'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+Random Forest
+accuracy
+--- 82.65 seconds ---
+0.85
+conf matrix: [[23  0]
+ [ 6 11]]
+Normalized confusion matrix
+[[1.         0.        ]
+ [0.35294118 0.64705882]]
+travel
+1, 200
+Random Forest
+Fitting 10 folds for each of 7 candidates, totalling 70 fits
+0.816 (+/-0.148) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.827 (+/-0.173) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.866 (+/-0.142) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.886 (+/-0.100) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.887 (+/-0.123) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.885 (+/-0.132) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.904 (+/-0.114) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+
+{'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+Random Forest
+accuracy
+--- 82.54 seconds ---
+0.825
+conf matrix: [[17  3]
+ [ 4 16]]
+Normalized confusion matrix
+[[0.85 0.15]
+ [0.2  0.8 ]]
+general
+1, 200
+Random Forest
+Fitting 10 folds for each of 7 candidates, totalling 70 fits
+0.660 (+/-0.383) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.576 (+/-0.236) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.647 (+/-0.222) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.685 (+/-0.178) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.697 (+/-0.148) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.685 (+/-0.175) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.700 (+/-0.197) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+
+{'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+Random Forest
+accuracy
+--- 82.66 seconds ---
+0.625
+conf matrix: [[17  5]
+ [10  8]]
+Normalized confusion matrix
+[[0.77272727 0.22727273]
+ [0.55555556 0.44444444]]
+ds200
+1, 500
+2, 1000
+Random Forest
+Fitting 10 folds for each of 7 candidates, totalling 70 fits
+0.779 (+/-0.109) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.816 (+/-0.059) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.825 (+/-0.064) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.840 (+/-0.107) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.835 (+/-0.096) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.840 (+/-0.102) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.846 (+/-0.096) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+
+{'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}
+Random Forest
+accuracy
+--- 391.25 seconds ---
+0.795
+conf matrix: [[83 21]
+ [20 76]]
+Normalized confusion matrix
+[[0.79807692 0.20192308]
+ [0.20833333 0.79166667]]

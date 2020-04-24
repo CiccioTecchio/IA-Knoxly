@@ -1,6 +1,6 @@
 dataset usato src/topic_ds/general/general200.csv:
-accuracy: 0.7
-precision: [0.68421053 1.        ]
-recall: [1.         0.14285714]
-fscore: [0.8125 0.25  ]
-roc_auc: 0.7664835164835164
+accuracy: 0.625
+precision: [0.62962963 0.61538462]
+recall: [0.77272727 0.44444444]
+fscore: [0.69387755 0.51612903]
+roc_auc: 0.7727272727272727
