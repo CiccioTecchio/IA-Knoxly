@@ -1,0 +1,6 @@
+dataset usato src/ds200.csv:
+accuracy: 0.765
+precision: [0.77669903 0.75257732]
+recall: [0.76923077 0.76041667]
+fscore: [0.77294686 0.75647668]
+roc_auc: 0.8489583333333333

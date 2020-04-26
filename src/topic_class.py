@@ -14,7 +14,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'#enable log of tf
 colnames = ['text', 'tipo']
 filename = str(sys.argv[1])
 
-pathdump = "src/dump/"
+pathdump = "src/dump/multilang/"
 dump_y, dump_embed, dump_classificatore = pathdump, pathdump, pathdump
 data = pandas.read_csv(filename, encoding='utf8', skiprows=1, names=colnames)
 
@@ -26,11 +26,10 @@ foo_text = data2.text.tolist()
 foo_y = data2.tipo.tolist()
 start_time = time.time()
 X_embed = embedding.concat_Embed(X_text, 500)
-Foo_embed = embedding.concat_Embed(foo_text, 500)
 y = data.tipo.tolist()
 y = np.array(y)
-pickle.dump(X_embed, open(dump_embed,"wb"))
-pickle.dump(y, open(dump_y, "wb"))
+pickle.dump(X_embed, open(dump_embed+"X_embed","wb"))
+pickle.dump(y, open(dump_y+"y", "wb"))
 print("EMBEDDING FATTO!!!")
 
 # Split
@@ -40,7 +39,7 @@ n_folds=5
 classificatore = RandomForestClassifier()
 pg = {'n_estimators':[17,37,51,177,213,517], 'min_samples_leaf':[1],'n_jobs':[-1]}
 print("Random Forest")
-bestRFparam=metriche.grid("src/topic_class/training/RF.txt",classificatore,pg,n_folds, training_set_data,training_set_labels,'f1_weighted')
+bestRFparam=metriche.grid("src/topic_class/training/multilang/RF.txt",classificatore,pg,n_folds, training_set_data,training_set_labels,'f1_weighted')
 print(bestRFparam)
 
 
@@ -49,23 +48,24 @@ classificatore.fit(training_set_data,training_set_labels)
 print("Random Forest")
 print("accuracy")
 y_pred=classificatore.predict(test_set_data)
+#Foo_embed = embedding.concat_Embed(foo_text, 500)
 
 print(accuracy_score(test_set_labels,y_pred))
 precision, recall, fscore, support = score(test_set_labels, y_pred)
 misure = metriche.printMisure(filename, precision, recall, fscore, accuracy_score(test_set_labels,y_pred))
-fp = open("src/topic_class/training/misure_testing.txt", "a")
+fp = open("src/topic_class/training/multilang/misure_testing.txt", "a")
 fp.write(misure)
 fp.close()
-pickle.dump(classificatore, open(dump_classificatore, "wb"))
+pickle.dump(classificatore, open(dump_classificatore+"topic_class", "wb"))
 
-print("Random Forest")
-print("accuracy")
-y_pred=classificatore.predict(Foo_embed)
+#print("Random Forest")
+#print("accuracy")
+#y_pred=classificatore.predict(Foo_embed)
 
-print(accuracy_score(foo_y,y_pred))
-precision, recall, fscore, support = score(foo_y, y_pred)
-misure = metriche.printMisure(file2, precision, recall, fscore, accuracy_score(foo_y,y_pred))
-fp = open("src/topic_class/validation/misure_wild.txt","a")
-fp.write(misure)
-fp.close()
+#print(accuracy_score(foo_y,y_pred))
+#precision, recall, fscore, support = score(foo_y, y_pred)
+#misure = metriche.printMisure(file2, precision, recall, fscore, accuracy_score(foo_y,y_pred))
+#fp = open("src/topic_class/validation/multilang/misure_wild.txt","a")
+#fp.write(misure)
+#fp.close()
 print("--- %s seconds ---" % round((time.time() - start_time),2))

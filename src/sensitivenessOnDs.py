@@ -1,6 +1,6 @@
 import sensitiveness, pickle
 
-PATH_TOPIC = "src/topic_ds/"
+PATH_TOPIC = "src/topic_ds/multilang/"
 title = ["politics", "health", "job", "travel", "general"]
 path = []
 for i in title: path.append(PATH_TOPIC+i+"/")
@@ -10,7 +10,7 @@ for i in range(5):
     pickle.dump(classificatore, open(path[i]+title[i]+".dump", "wb"))
 
 #sensitiveness on DS
-PATH = "src/sensitiveness_class/"
+PATH = "src/sensitiveness_class/multilang/"
 print("ds200")
 classificatore = sensitiveness.sensitiveness('src/ds200.csv', 10, 'roc_auc', PATH+"RF.txt", PATH+"training/misure_testing.txt", PATH, "ds200")
 pickle.dump(classificatore, open(PATH+"ds200.dump", "wb"))

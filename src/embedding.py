@@ -1,8 +1,9 @@
 import pickle
 import tensorflow_hub as hub
+import tensorflow_text
 
 def dividi(totList, start, n):
-    embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+    embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual/3")
     tr = []
     i = 0
     while i<n: 
