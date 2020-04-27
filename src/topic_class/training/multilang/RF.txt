@@ -1,6 +1,6 @@
-0.970 (+/-0.016) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
-0.983 (+/-0.016) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
-0.983 (+/-0.009) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
-0.984 (+/-0.010) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
-0.983 (+/-0.012) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
-0.984 (+/-0.013) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
+0.977 (+/-0.010) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
+0.980 (+/-0.011) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
+0.982 (+/-0.012) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
+0.985 (+/-0.014) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
+0.986 (+/-0.013) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
+0.984 (+/-0.012) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
