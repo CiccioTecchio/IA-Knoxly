@@ -11,6 +11,24 @@ Sensitive data that can identify AI relate to the following topics:
 - **travel**
 - **general**
 
+
+## Prerequisites
+To run this model you need:
+|        Package       |  Version  |
+|:--------------------:|:---------:|
+|        pandas        |   1.0.1   |
+|       matpotlib      |   3.1.3   |
+|         numpy        |   1.18.1  |
+|         regex        | 2020.2.20 |
+|   sentence-splitter  |    1.4    |
+|        sklearn       |    0.0    |
+|         scipy        |   1.4.1   |
+|      tensorflow      |   2.1.0   |
+| tensorflow-estimator |   2.1.0   |
+|    tensorflow-hub    |   0.7.0   |
+|    tensorflow-text   |   2.1.1   |
+|       textblob       |   0.15.3  |
+
 ## The data
 To identify the following topics, a classifier has been trained to take data from the following datasets.
 - [Election day tweet](https://www.kaggle.com/kinguistics/election-day-tweets?rvi=1)
