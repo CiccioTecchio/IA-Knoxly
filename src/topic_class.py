@@ -17,11 +17,13 @@ filename = str(sys.argv[1])
 pathdump = "src/dump/multilang/"
 dump_y, dump_embed, dump_classificatore = pathdump, pathdump, pathdump
 data = pandas.read_csv(filename, encoding='utf8', skiprows=1, names=colnames)
+data.dropna(inplace=True)
 
 # Creazione dataset
 X_text = data.text.tolist()
 file2 = "src/ds2000.csv"
 data2 = pandas.read_csv(file2, encoding='utf8', skiprows=1, names=colnames)
+data2.dropna(inplace=True)
 foo_text = data2.text.tolist()
 foo_y = data2.tipo.tolist()
 start_time = time.time()
@@ -35,7 +37,7 @@ print("EMBEDDING FATTO!!!")
 # Split
 training_set_data,test_set_data,training_set_labels,test_set_labels = train_test_split(X_embed,y,test_size=0.2,stratify=y)
 
-n_folds=5
+n_folds=8
 classificatore = RandomForestClassifier()
 pg = {'n_estimators':[17,37,51,177,213,517], 'min_samples_leaf':[1],'n_jobs':[-1]}
 print("Random Forest")

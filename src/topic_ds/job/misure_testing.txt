@@ -1,6 +1,0 @@
-dataset usato src/topic_ds/job/job200.csv:
-accuracy: 0.85
-precision: [0.79310345 1.        ]
-recall: [1.         0.64705882]
-fscore: [0.88461538 0.78571429]
-roc_auc: 0.9718670076726342
