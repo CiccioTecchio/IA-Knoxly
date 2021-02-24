@@ -10,6 +10,9 @@ Sensitive data that can identify AI relate to the following topics:
 - **job**
 - **travel**
 - **general**
+- **racism**
+- **religion**
+- **sexual orientation**
 
 
 ## Prerequisites
