@@ -1,6 +1,0 @@
-dataset usato src/topic_ds/health/health200.csv:
-accuracy: 0.9
-precision: [0.9 0.9]
-recall: [0.9 0.9]
-fscore: [0.9 0.9]
-roc_auc: 0.9725

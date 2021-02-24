@@ -1,7 +1,0 @@
-0.774 (+/-0.135) for {'min_samples_leaf': 1, 'n_estimators': 17, 'n_jobs': -1}
-0.810 (+/-0.184) for {'min_samples_leaf': 1, 'n_estimators': 37, 'n_jobs': -1}
-0.845 (+/-0.163) for {'min_samples_leaf': 1, 'n_estimators': 51, 'n_jobs': -1}
-0.829 (+/-0.189) for {'min_samples_leaf': 1, 'n_estimators': 177, 'n_jobs': -1}
-0.848 (+/-0.216) for {'min_samples_leaf': 1, 'n_estimators': 213, 'n_jobs': -1}
-0.836 (+/-0.188) for {'min_samples_leaf': 1, 'n_estimators': 517, 'n_jobs': -1}
-0.834 (+/-0.203) for {'min_samples_leaf': 1, 'n_estimators': 1013, 'n_jobs': -1}

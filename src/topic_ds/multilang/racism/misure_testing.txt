@@ -1,0 +1,6 @@
+dataset usato src/topic_ds/multilang/racism/racism200.csv:
+accuracy: 0.8
+precision: [0.71428571 0.89473684]
+recall: [0.88235294 0.73913043]
+fscore: [0.78947368 0.80952381]
+roc_auc: 0.8746803069053708

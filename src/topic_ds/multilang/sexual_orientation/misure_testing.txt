@@ -1,0 +1,6 @@
+dataset usato src/topic_ds/multilang/sexual_orientation/sexual_orientation200.csv:
+accuracy: 0.725
+precision: [0.7037037  0.76923077]
+recall: [0.86363636 0.55555556]
+fscore: [0.7755102  0.64516129]
+roc_auc: 0.861111111111111
